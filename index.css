@@ -205,6 +205,7 @@ header table {
     z-index:1;
     transition:0.4s ease-in-out;
 }
+
 #photos img { 
     display: block;
     width:100%;
@@ -212,39 +213,41 @@ header table {
     margin:4.5% 0px;
     transition:0.4s ease-in-out;
 }
+
+
+#photos image {
+    display: block;
+    width:100%;
+    height:auto;
+    margin:4.5% 0px;
+    transition:0.4s ease-in-out;
+}
+
 #photos img:hover {
     opacity: 0.3;
     cursor: pointer;
 }
 
-#photos .overlay {
+#photos text {
     position: absolute;
-    top: 0;
     bottom: 0;
-    left: 0;
     right: 0;
-    height: 100%;
-    width: 100%;
+    background: orangered;
+    color: wheat;
+    margin-bottom: 5px;
+    font-family: sans-serif;
     opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-  }
-  
-  #photos img:hover .overlay {
-    opacity: 1;
-  }
-  
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#photos text:hover {
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7; 
+}
 
 #bio {
     width:92vw;
