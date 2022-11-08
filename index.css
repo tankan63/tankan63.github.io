@@ -205,8 +205,7 @@ header table {
     z-index:1;
     transition:0.4s ease-in-out;
 }
-#photos img {
-    opacity: 1;
+#photos img { 
     display: block;
     width:100%;
     height:auto;
@@ -218,27 +217,34 @@ header table {
     cursor: pointer;
 }
 
-#photos middle {
-    transition: 0.3s ease;
+#photos .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
     opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  #photos img:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     text-align: center;
-}
-
-#photos middle:hover {
-    opacity: 1;
-}
-
-#photos text {
-    background-color: #04AA6D;
-    color: black;
-    font-size: 16px;
-    padding: 16px 32px;
-}
+  }
 
 #bio {
     width:92vw;
