@@ -206,15 +206,39 @@ header table {
     transition:0.4s ease-in-out;
 }
 #photos img {
+    opacity: 1;
+    display: block;
     width:100%;
     height:auto;
     margin:4.5% 0px;
     transition:0.4s ease-in-out;
 }
 #photos img:hover {
-    transform: scale(1.1);
+    opacity: 0.3;
     cursor: pointer;
 }
+
+#photos middle {
+    transition: 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#photos middle:hover {
+    opacity: 1;
+}
+
+#photos text {
+    background-color: #04AA6D;
+    color: black;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
 #bio {
     width:92vw;
     padding:6vh 4vw;
