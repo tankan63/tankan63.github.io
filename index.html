@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 <body>
     <script>NekoType="white"</script>
@@ -53,14 +54,8 @@
                 </div>
                 <h2>Hi there!</h2>
                 <p>Do you have a suggestion for a feature? Some criticism about the tool or something that confused you? Let me know! sadgrl[at]riseup.net</p>
-                <h3>Other Tools</h3>
-                <ul>
-                    <li><a href="https://sadgrlonline.github.io/html-cheatsheet/" target="_blank">HTML Cheatsheet</a>
-                    </li><li><a href="https://sadgrl.online/webmastery/webmaster-links.html" target="_blank">Webmaster Links</a></li>
-                    <li><a href="https://sadgrl.online/webmastery/downloads/tiledbgs.html" target="_blank">Tiled BGs</a></li>
-                    <li><a href="https://sadgrl.online/webmastery/downloads/fonts.html" target="_blank">Fonts</a></li>
-                    <li><a href="https://sadgrl.online/projects/ideas/" target="_blank">Site Ideas</a></li>
-                </ul>
+                <h3>For the kind visitors: </h3>
+                <p> Last updated: <span id="lastupdate"></span></p>
             </aside>
             <main>
                 <h1>Welcome to my Website!</h1>
@@ -99,7 +94,6 @@
             </aside>
         </div>
         <footer id="footer">Tanay Mehra, 2023
-            <br> <p>Do I even put something here?</p>
         </footer>
     </div>
     <!-- THIS IS THE CSS !-->
@@ -143,8 +137,7 @@ and then link it! Many fonts have separate files for each style
         }
 
         p {
-            font-family: 'IBM Plex Mono', monospace;
-            color: 
+            font-family: 'IBM Plex Mono', monospace; 
         }
 
         * {
