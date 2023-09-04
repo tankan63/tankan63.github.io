@@ -67,7 +67,7 @@ and change the media query according to the comment! */
 /* the area below is for all links on your page
 EXCEPT for the navigation */
 #container a {
-    color: #ED64F5;
+    color: #fffffe;
     font-weight: bold;
     /* if you want to remove the underline
 you can add a line below here that says:
@@ -76,7 +76,7 @@ text-decoration:none; */
 
 #header {
     width: 100%;
-    background-color: #e78fb3;
+    background-color: #2cb67d;
     /* header color here! */
     height: 150px;
     /* this is only for a background image! */
@@ -96,7 +96,7 @@ you can add them directly to the <div id="header"></div> element! */
 #navbar {
     font-family: 'IBM Plex Mono', monospace;
     height: 40px;
-    background-color: #55423D;
+    background-color: #16161A;
     /* navbar color */
     width: 100%;
 }
@@ -115,7 +115,7 @@ you can add them directly to the <div id="header"></div> element! */
 
 /* navigation links*/
 #navbar li a {
-    color: #9656a1;
+    color: #94a1b2;
     /* navbar text color */
     font-weight: 800;
     text-decoration: none;
@@ -124,7 +124,7 @@ you can add them directly to the <div id="header"></div> element! */
 
 /* navigation link when a link is hovered over */
 #navbar li a:hover {
-    color: #e78fb3;
+    color: #2cb67d;
     text-decoration: underline;
 }
 
@@ -136,7 +136,7 @@ you can add them directly to the <div id="header"></div> element! */
 if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
 aside {
-    background-color: #ffc0ad;
+    background-color: #72757e;
     width: 200px;
     padding: 20px;
     font-size: smaller;
@@ -170,7 +170,8 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
 
 footer {
     font-family: 'IBM Plex Mono', monospace;
-    background-color: #55423D;
+    background-color: #16161a;
+    color: #7f5af0;
     /* background color for footer */
     width: 100%;
     height: 40px;
@@ -182,7 +183,7 @@ footer {
 h1,
 h2,
 h3 {
-    color: #e78fb3;
+    color: #2cb67d;
     font-family: 'IBM Plex Mono', monospace;
 }
 
@@ -198,10 +199,10 @@ strong {
 
 /* this is just a cool box, it's the darker colored one */
 .box {
-    background-color: #55423D;
+    background-color: #16161A;
     border: 1px solid #271c19;
     padding: 10px;
-    color: #e78fb3;
+    color: #2cb67d;
 }
 
 /* CSS for extras */
@@ -211,7 +212,7 @@ strong {
     height: 30px;
     padding: 10px;
     font-size: smaller;
-    background-color: #55423D;
+    background-color: #16161A;
 }
 
 
