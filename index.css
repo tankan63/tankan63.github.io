@@ -218,6 +218,10 @@ a {
     text-decoration: none;
 }
 
+i {
+    padding: 10px;
+}
+
 a:hover {
     text-decoration: underline;
 }
