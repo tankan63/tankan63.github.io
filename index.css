@@ -67,7 +67,8 @@ and change the media query according to the comment! */
 /* the area below is for all links on your page
 EXCEPT for the navigation */
 #container a {
-    color: #fffffe;
+    /*color: #fffffe;*/
+    color: #7f5af0;
     font-weight: bold;
     /* if you want to remove the underline
 you can add a line below here that says:
@@ -164,8 +165,16 @@ left sidebar is 1, content is 2, and right sidebar is 3! */
        order: 1;
    }
 
+#leftSidebar a {
+    color: #fff3ec;
+}
+
 #rightSidebar {
     order: 3;
+}
+
+#rightSidebar a {
+    color: #fff3ec;
 }
 
 footer {
