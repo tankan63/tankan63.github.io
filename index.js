@@ -1,68 +1,37 @@
-var width = $(window).width(); 
-window.onscroll = function(){
-if ((width >= 1000)){
-    if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        $("#header").css("background","#fff");
-        $("#header").css("color","#000");
-        $("#header").css("box-shadow","0px 0px 20px rgba(0,0,0,0.09)");
-        $("#header").css("padding","4vh 4vw");
-        $("#navigation a").hover(function(){
-            $(this).css("border-bottom","2px solid rgb(255, 44, 90)");
-        },function(){
-            $(this).css("border-bottom","2px solid transparent");
-        });
-    }else{
-        $("#header").css("background","transparent");
-        $("#header").css("color","#fff");
-        $("#header").css("box-shadow","0px 0px 0px rgba(0,0,0,0)");
-        $("#header").css("padding","6vh 4vw");
-        $("#navigation a").hover(function(){
-            $(this).css("border-bottom","2px solid #fff");
-        },function(){
-            $(this).css("border-bottom","2px solid transparent");
-        });
+// Some link magic?
+let links = document.querySelectorAll("a");
+for (var i=0; i < links.length; i++) {
+    links[i].setAttribute("target", "_blank");
+    links[i].setAttribute("rel", "noreferrer noopener")
+}
+// lastUpdated.js
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the last modified timestamp of the current page
+    let lastModified = new Date(document.lastModified);
+
+    // Extract the date components
+    let year = lastModified.getFullYear();
+    let month = lastModified.getMonth() + 1; // Months are 0-indexed
+    let day = lastModified.getDate();
+
+    // Update the HTML content of the 'lastUpdated' element
+    document.getElementById("lastUpdated").textContent = year + "-" + month + "-" + day;
+});
+
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState === 4 && this.status === 200) {
+        let site_data = JSON.parse(this.responseText);
+        let num_arr = site_data.info.views.toString().split("");
+        console.log(site_data);
+        let num_str = "";
+        for (i = 0; i < num_arr.length; i++) {
+            num_str += num_arr[i];
+            if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
+            let date_str = site_data.info.last_updated;
+            let date_obj = new Date(site_data.info.last_updated);
+            document.getElementById("lastupdate").innerHTML = (date_obj.getMonth()+1) + "-" + date_obj.getDate() + "-" + date_obj.getFullYear();
+        }
+        document.getElementById("hitcount").innerHTML = num_str;
     }
-}
-}
-
-function magnify(imglink){
-    $("#img_here").css("background",`url('${imglink}') center center`);
-    $("#magnify").css("display","flex");
-    $("#magnify").addClass("animated fadeIn");
-    setTimeout(function(){
-        $("#magnify").removeClass("animated fadeIn");
-    },800);
-}
-
-
-function closemagnify(){
-    $("#magnify").addClass("animated fadeOut");
-    setTimeout(function(){
-        $("#magnify").css("display","none");
-        $("#magnify").removeClass("animated fadeOut");
-        $("#img_here").css("background",`url('') center center`);
-    },800);
-}
-
-setTimeout(function(){
-    $("#loading").addClass("animated fadeOut");
-    setTimeout(function(){
-      $("#loading").removeClass("animated fadeOut");
-      $("#loading").css("display","none");
-    },800);
-},1650);
-
-$(document).ready(function(){
-    $("a").on('click', function(event) {
-      if (this.hash !== "") {
-        event.preventDefault();
-        var hash = this.hash;
-        $('body,html').animate({
-        scrollTop: $(hash).offset().top
-        }, 1800, function(){
-        window.location.hash = hash;
-       });
-       } 
-      });
-  });
-  
+};
