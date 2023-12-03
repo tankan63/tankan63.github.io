@@ -214,6 +214,14 @@ strong {
     color: #2cb67d;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .divider {
     background-color: #16161A;
     border: 1px solid #271c19;
