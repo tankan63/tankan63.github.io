@@ -1,3 +1,9 @@
+// Some link magic?
+let links = document.querySelectorAll("a");
+for (var i=0; i < links.length; i++) {
+    links[i].setAttribute("target", "_blank");
+    links[i].setAttribute("rel", "noreferrer noopener")
+}
 // lastUpdated.js
 document.addEventListener("DOMContentLoaded", function() {
     // Get the last modified timestamp of the current page
