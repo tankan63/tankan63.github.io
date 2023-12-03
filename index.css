@@ -214,6 +214,13 @@ strong {
     color: #2cb67d;
 }
 
+.divider {
+    background-color: #16161A;
+    border: 1px solid #271c19;
+    padding: 4px;
+    color: #2cb67d;
+}
+
 /* CSS for extras */
 
 #topBar {

@@ -24,13 +24,14 @@
         /* if you want to put images IN the header,
     you can add them directly to the <div id="header"></div> element! */
         background-image: url("assets/pizza.jpeg");
-        background-size: contain;
-        background-position: 100% 100%;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: 100% 40%;
     }
 
     #header img {
-        object-fit: cover;
-        object-position: 50% 50%;
+        object-fit: fill;
+        /*object-position: 50% 50%;*/
     }
 </style>
 <script src="./index.js"></script>
@@ -55,13 +56,13 @@
     <div id="flex">
         <main>
             <h1>All the cool, random stuff</h1>
+            <div class="divider">
+                <p>Sport stuff</p>
+            </div>
             <p>I wrote a paper about simulating networks, read it here: </p>
             <object data="files/project3reportfinal.pdf" type="application/pdf" width="100%" height="500px">
                 <p>Unable to display PDF file. <a href="files/project3reportfinal.pdf">Download</a> instead.</p>
             </object>
-            <div class="box">
-                <p>Lamo</p>
-            </div>
         </main>
     </div>
     <footer id="footer">Tanay Mehra, 2023
