@@ -1,0 +1,12 @@
+.output
+.DS_Store
+node_modules
+/dist
+
+.envrc
+.env.local
+
+.idea
+.vscode
+
+package-lock.json
