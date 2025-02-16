@@ -141,6 +141,7 @@ aside {
     width: 200px;
     padding: 20px;
     font-size: smaller;
+    opacity: 0.4;
     /* this makes the sidebar text slightly smaller */
 }
 

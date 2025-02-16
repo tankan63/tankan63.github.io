@@ -8,51 +8,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="ico" href="assets/favicon.ico" />
 
 </head>
 <body>
 <style>
-    #header {
-        width: 100%;
-        background-color: #e78fb3;
-        /* header color here! */
-        height: 150px;
-        /* this is only for a background image! */
-        /* if you want to put images IN the header,
-    you can add them directly to the <div id="header"></div> element! */
-        background-image: url("assets/htx.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 100% 70%;
-    }
-
-    #header img {
-        object-fit: fill;
-        /*object-position: 50% 50%;*/
+    :root {
+        --body-bg-image: url(backgrounds/tactics.png);
+        --header-image: url(assets/htx.jpg);
     }
 </style>
+</style>
 <script src="./index.js"></script>
-<script>NekoType="white"</script>
-<h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a
-        href="https://webneko.net">Neko</a></h1>
+
 <div id="container">
 
-    <div id="headerArea">
-        <div id="header"> </div>
-        <nav id="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="project.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="fun.html">Fun</a></li>
-            </ul>
-        </nav>
+    <div class="header">
+
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="fun.html">Fun</a>
+        </div>
+
     </div>
 
-    <div id="flex">
+    <div class="content">
         <main>
             <h1>Where to find me!</h1>
             <div class="box">
@@ -81,20 +65,19 @@
             </div>
         </main>
     </div>
-    <footer id="footer">Tanay Mehra, 2023
-        <div id="topBar">
-            <marquee>
-                <img src="assets/badges/utexas_copy1.png">
-                <img src="assets/badges/sony.png">
-                <img src="assets/badges/tool_copy2.gif">
-                <img src="assets/badges/indian.gif">
-                <img src="assets/badges/texan.gif">
-                <img src="assets/badges/Archlinux_80x15.png">
-                <img src="assets/badges/onlyiegif.gif">
-                <img src="assets/badges/fifawc06.php.png">
-                <img src="assets/badges/astros.gif">
-            </marquee></div>
-    </footer>
+    <div class="footer">
+        <div class="marquee">
+            <img src="assets/badges/utexas_copy1.png">
+            <img src="assets/badges/sony.png">
+            <img src="assets/badges/tool_copy2.gif">
+            <img src="assets/badges/indian.gif">
+            <img src="assets/badges/texan.gif">
+            <img src="assets/badges/Archlinux_80x15.png">
+            <img src="assets/badges/onlyiegif.gif">
+            <img src="assets/badges/fifawc06.php.png">
+            <img src="assets/badges/astros.gif">
+        </div>
+    </div>
 </div>
 </body>
 </html>
