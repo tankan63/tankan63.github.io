@@ -109,8 +109,19 @@ body {
 	font-weight: 600;
 	padding: 0.5em 1em;
 
-	transition: all 200ms;
+	/*transition: all 200ms;*/
 
+	transition: all 200ms, box-shadow 400ms;
+}
+
+.nav a:hover {
+	color: #fff;
+	box-shadow:
+			0 0 5px var(--button_background),
+			0 0 10px var(--button_background),
+			0 0 20px var(--button_background),
+			0 0 40px var(--button_background);
+	transform: scale(1.1);
 }
 
 p {
