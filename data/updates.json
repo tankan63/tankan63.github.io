@@ -1,5 +1,35 @@
 [
     {
+        "date": "Mar 2026",
+        "text": "Started a new adventure at SSPL as a Content Security Lead.",
+        "new": true
+    },
+    {
+        "date": "Jan 2026",
+        "text": "I'll be moving back to Mumbai in March, come say hi before I head off!",
+        "new": true
+    },
+    {
+        "date": "Feb 2025",
+        "text": "Elden Ring was on sale. Guess you can beacon a fellow Tarnished to help you out!",
+        "new": true
+    },
+    {
+        "date": "Mar 2024",
+        "text": "RODEO Season kicks off in Houston, NRG center is where you can find me.",
+        "new": false
+    },
+    {
+        "date": "Feb 2024",
+        "text": "I started playing Baldur's Gate 3. Send me a message if you want to play some co-op",
+        "new": false
+    },
+    {
+        "date": "Oct 2023",
+        "text": "I'll be at HOU.SEC.CON in the GRB Convention Center in Houston! Come say hi",
+        "new": false
+    },
+    {
         "date": "Sep 2023",
         "text": "Stay safe from the hurricanes!",
         "new": false

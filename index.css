@@ -10,7 +10,7 @@ the images as variables */
 
 :root {
     --header-image: url('assets/grad.JPG');
-    --body-bg-image: url('assets/blkwarp.gif');
+    --body-bg-image: url('assets/grass.png');
 
     /* colors */
     --content: #43256E;
@@ -383,6 +383,10 @@ feel free to play around with the order!
 .retro-textarea { height: 80px; resize: vertical; }
 
 /* update list in sidebar */
+#leftSidebar .box {
+    max-height: 200px;
+    overflow-y: auto;
+}
 #updatesList li {
     margin-bottom: 8px;
     line-height: 1.4;
