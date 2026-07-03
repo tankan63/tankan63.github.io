@@ -5,22 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tanay Mehra</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="ico" href="assets/favicon.ico"/>
-
 </head>
 <body>
 <script src="./index.js"></script>
 <script>NekoType = "white"</script>
 <h1 id=nl>
     <script src="https://webneko.net/n20171213.js"></script>
-    <a
-            href="https://webneko.net">Neko</a></h1>
+    <a href="https://webneko.net">Neko</a></h1>
 <div id="container">
 
     <div id="headerArea">
@@ -40,37 +35,35 @@
         <aside id="leftSidebar">
             <h2>Updates</h2>
             <div class="box">
-                <ul style="padding-left:10px;">
-                    <li>Stay safe from the hurricanes!</li>
-                    <li>I'll be volunteering RFID and NFC exploits at the Physical Security Village at DEFCON 31! Drop
-                        by and say hi!
-                    </li>
-                    <li>We graduated!<br></li>
+                <!-- Updates are loaded from data/updates.json -->
+                <!-- To add a new update: edit data/updates.json and add an entry at the top -->
+                <ul id="updatesList" style="padding-left:10px;">
+                    <li>Loading...</li>
                 </ul>
             </div>
             <h2>Feedback!</h2>
             <p>Do you have suggestions? Praises? Curses? Just wanna chat?</p>
             <p>Let me know at: mehra.tanay@gmx.com</p>
             <h3>For the kind visitors: </h3>
-            <p> Last updated: <span id="lastUpdated"></span></p>
-            <p> Visitor count:
+            <p>Last updated: <span id="lastUpdated"></span></p>
+            <p>Visitor count:
                 <script type="text/javascript" src="//counter.websiteout.net/js/21/0/0/0"></script>
             </p>
         </aside>
         <main>
-            <h1>Welcome to my website :)</h1>
+            <h1>Welcome to my website :) <span class="blink">▌</span></h1>
             <p><strong>"Nostalgia is a hell of a drug".</strong></p>
             <p>I enjoy things that remind me of simpler times.</p>
             <p>As a result, I chose to revamp my personal website to reflect my personality and the things that I enjoy.
                 Instead of having a fancy yet generic templated site with smooth Vue3 components, I preferred a humble
                 and minimal page with old school marquee tags and GIF backgrounds. It ain't much but I'd rather have it this way.
             </p>
-            <p> My mom first made me an email account for my 10th birthday back in 2008 and I used it as frequently as 
-                I use my phone now, almost 15 years later. 
+            <p>My mom first made me an email account for my 10th birthday back in 2008 and I used it as frequently as
+                I use my phone now, almost 15 years later.
             </p>
-            <img src="/assets/email.png" alt="An email sent from me to my mom back in 2008.">
+            <img src="/assets/email.png" alt="An email sent from me to my mom back in 2008." loading="lazy">
             <p>I am eternally grateful to my parents for giving me an environment
-            where I could play around on the internet since a <a href="https://dig.watch/updates/itu-report-one-third-of-the-global-population-remains-unconnected">
+                where I could play around on the internet since a <a href="https://dig.watch/updates/itu-report-one-third-of-the-global-population-remains-unconnected">
                     huge amount of people still don't have that luxury.
                 </a></p>
         </main>
@@ -80,15 +73,11 @@
             If you wish to do the same, check out some of these cool links below!</p>
             <h3>Tools</h3>
             <ul>
-                <li><a href="https://sadgrlonline.github.io/html-cheatsheet/" target="_blank">HTML Cheatsheet</a>
-                </li>
-                <li><a href="https://sadgrl.online/webmastery/webmaster-links.html" target="_blank">Webmaster Links</a>
-                </li>
-                <li><a href="https://sadgrl.online/webmastery/downloads/tiledbgs.html" target="_blank">Tiled BGs</a>
-                </li>
+                <li><a href="https://sadgrlonline.github.io/html-cheatsheet/" target="_blank">HTML Cheatsheet</a></li>
+                <li><a href="https://sadgrl.online/webmastery/webmaster-links.html" target="_blank">Webmaster Links</a></li>
+                <li><a href="https://sadgrl.online/webmastery/downloads/tiledbgs.html" target="_blank">Tiled BGs</a></li>
                 <li><a href="https://sadgrl.online/webmastery/downloads/fonts.html" target="_blank">Fonts</a></li>
                 <li><a href="https://sadgrl.online/projects/ideas/" target="_blank">Site Ideas</a></li>
-
             </ul>
             <h2>What's up with your hobbies?</h2>
             <div class="box">
