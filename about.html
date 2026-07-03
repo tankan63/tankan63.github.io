@@ -4,39 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tanay Mehra</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <title>Tanay Mehra — About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="index.css">
-  <link rel="icon" type="ico" href="assets/favicon.ico" />
-
+  <link rel="icon" type="ico" href="assets/favicon.ico"/>
 </head>
 <body>
 <style>
   #header {
     width: 100%;
     background-color: #e78fb3;
-    /* header color here! */
     height: 150px;
-    /* this is only for a background image! */
-    /* if you want to put images IN the header,
-you can add them directly to the <div id="header"></div> element! */
     background-image: url("assets/tkd.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 10% 35%;
   }
-
-  #header img {
-    object-fit: scale-down;
-    /*object-position: 50% 50%;*/
-  }
 </style>
 <script src="./index.js"></script>
 <script>NekoType="white"</script>
-<h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a
-        href="https://webneko.net">Neko</a></h1>
+<h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a></h1>
 <div id="container">
 
   <div id="headerArea">
@@ -56,31 +44,54 @@ you can add them directly to the <div id="header"></div> element! */
     <main>
       <h1>'Tis me!</h1>
       <p><strong>"Better here than anywhere else".</strong></p>
-     <p>
-       Hi! My name's Tanay Mehra, but feel free to call me Tan :)
-       <br>
-       <br>
-       I am currently working as a Software Engineer at Allthenticate in Houston, where I am helping the world move on from passwords.
-       Most of my development is done using Python, with occasional sprinkles of web development and low-level scripting on both Linux and Windows.
-       <br>
-       <br>
-       I graduated from my Master’s program in Computer Science at Northeastern University in December 2022 and attended my commencement ceremony in May 2023.
-       I met so many of my friends back in Boston and it made me glad to have gone out and introduced myself to total strangers who would one day become some of my closest allies!
-       <br>
-       <br>
-       Before enrolling in this program, I had graduated with a Bachelor’s degree in Commerce and Accounting, and worked as a junior accountant for a while after which I decided to enter the program to pursue the field of CS.
-       After making the switch I started from the basics of CS, including discrete mathematics and introductory programming.
-       Gradually, I started exploring areas of concentration and eventually stuck with Network engineering, Operating systems and Cybersecurity which encompasses both.
-       <br>
-       <br>
-       When I'm not working, I make sure to spend time on my hobbies, such as Taekwondo, sketching, reading, cooking, randomly making beats and learning new languages.
-       <br>
-       <br>
-       Best wishes and stay safe! <br>
-       -TM
-     </p>
+      <p>
+        Hi! My name's Tanay Mehra, but feel free to call me Tan :)
+        <br><br>
+        I am currently working as a Software Engineer at Allthenticate in Houston, where I am helping the world move on from passwords.
+        Most of my development is done using Python, with occasional sprinkles of web development and low-level scripting on both Linux and Windows.
+        <br><br>
+        I graduated from my Master's program in Computer Science at Northeastern University in December 2022 and attended my commencement ceremony in May 2023.
+        I met so many of my friends back in Boston and it made me glad to have gone out and introduced myself to total strangers who would one day become some of my closest allies!
+        <br><br>
+        Before enrolling in this program, I had graduated with a Bachelor's degree in Commerce and Accounting, and worked as a junior accountant for a while after which I decided to enter the program to pursue the field of CS.
+        After making the switch I started from the basics of CS, including discrete mathematics and introductory programming.
+        Gradually, I started exploring areas of concentration and eventually stuck with Network engineering, Operating systems and Cybersecurity which encompasses both.
+        <br><br>
+        When I'm not working, I make sure to spend time on my hobbies, such as Taekwondo, sketching, reading, cooking, randomly making beats and learning new languages.
+        <br><br>
+        Best wishes and stay safe! <br>
+        -TM
+      </p>
+
+      <!-- GUESTBOOK / ANONYMOUS MESSAGE FORM -->
+      <!--
+        SETUP: To receive messages, create a free account at https://formspree.io
+        using your email, then create a new form and replace YOUR_FORM_ID below
+        with the form ID they give you (e.g. "xyzabc00").
+        Free tier: 50 submissions/month. Messages are forwarded to your email.
+      -->
+      <div class="guestbook">
+        <h2>&#x1F4AC; Leave a Message!</h2>
+        <p style="color:#94a1b2; font-size:12px;">No account needed. Say hi, leave feedback, or just vibe.</p>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="guestbookForm">
+          <label class="retro-label">Name (or stay anon):
+            <input class="retro-input" type="text" name="name" placeholder="Anonymous Visitor" autocomplete="off">
+          </label>
+          <label class="retro-label">Message: *
+            <textarea class="retro-textarea" name="message" placeholder="Leave your mark on the internet..." required></textarea>
+          </label>
+          <input type="hidden" name="_subject" value="New guestbook message!">
+          <br>
+          <button class="retro-btn" type="submit">[ Sign the Guestbook! ]</button>
+        </form>
+        <p style="color:#72757e; font-size:10px; margin-top:8px;">
+          * For a fully public guestbook where visitors see each other's messages, check out
+          <a href="https://www.cbox.ws" style="color:#7f5af0;">CBox</a> — free and very retro.
+        </p>
+      </div>
     </main>
   </div>
+
   <footer id="footer">Tanay Mehra, 2023
     <div id="topBar">
       <marquee>
@@ -93,7 +104,8 @@ you can add them directly to the <div id="header"></div> element! */
         <img src="assets/badges/onlyiegif.gif">
         <img src="assets/badges/fifawc06.php.png">
         <img src="assets/badges/astros.gif">
-      </marquee></div>
+      </marquee>
+    </div>
   </footer>
 </div>
 </body>
