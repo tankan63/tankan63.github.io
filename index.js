@@ -1,37 +1,41 @@
-// Some link magic?
-let links = document.querySelectorAll("a");
-for (var i=0; i < links.length; i++) {
-    links[i].setAttribute("target", "_blank");
-    links[i].setAttribute("rel", "noreferrer noopener")
-}
-// lastUpdated.js
-document.addEventListener("DOMContentLoaded", function() {
-    // Get the last modified timestamp of the current page
-    let lastModified = new Date(document.lastModified);
-
-    // Extract the date components
-    let year = lastModified.getFullYear();
-    let month = lastModified.getMonth() + 1; // Months are 0-indexed
-    let day = lastModified.getDate();
-
-    // Update the HTML content of the 'lastUpdated' element
-    document.getElementById("lastUpdated").textContent = year + "-" + month + "-" + day;
+// Open all links in a new tab
+document.querySelectorAll("a").forEach(function(link) {
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noreferrer noopener");
 });
 
-let xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
-        let site_data = JSON.parse(this.responseText);
-        let num_arr = site_data.info.views.toString().split("");
-        console.log(site_data);
-        let num_str = "";
-        for (i = 0; i < num_arr.length; i++) {
-            num_str += num_arr[i];
-            if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
-            let date_str = site_data.info.last_updated;
-            let date_obj = new Date(site_data.info.last_updated);
-            document.getElementById("lastupdate").innerHTML = (date_obj.getMonth()+1) + "-" + date_obj.getDate() + "-" + date_obj.getFullYear();
-        }
-        document.getElementById("hitcount").innerHTML = num_str;
+// Show last-modified date on index.html
+document.addEventListener("DOMContentLoaded", function() {
+    var el = document.getElementById("lastUpdated");
+    if (el) {
+        var d = new Date(document.lastModified);
+        el.textContent = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
     }
-};
+
+    // TO ADD UPDATES: edit data/updates.json
+    // Format: {"date": "Mon Year", "text": "...", "new": true/false}
+    loadUpdates();
+});
+
+function loadUpdates() {
+    var list = document.getElementById("updatesList");
+    if (!list) return;
+
+    fetch("data/updates.json")
+        .then(function(r) { return r.json(); })
+        .then(function(updates) {
+            list.innerHTML = "";
+            updates.forEach(function(u) {
+                var li = document.createElement("li");
+                var badge = u.new ? ' <span class="new-badge">NEW!</span>' : "";
+                li.innerHTML =
+                    '<span class="update-date">[' + u.date + ']</span>' +
+                    u.text + badge;
+                list.appendChild(li);
+            });
+        })
+        .catch(function() {
+            // fetch fails when opened as a local file:// — works fine on GitHub Pages
+            list.innerHTML = "<li>Updates unavailable (serve via HTTP to load)</li>";
+        });
+}
