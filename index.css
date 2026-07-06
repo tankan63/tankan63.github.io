@@ -150,6 +150,9 @@ between the sidebars! */
 main {
     font-family: 'IBM Plex Mono', monospace;
     background-color: #fff3ec;
+    /* faint tiled pattern behind the text; the cream overlay keeps it
+    subtle — lower the 0.92 values to let more of the pattern through */
+    background-image: linear-gradient(rgba(255, 243, 236, 0.67), rgba(255, 243, 236, 0.67)), url('assets/misc059.gif');
     flex: 1;
     padding: 20px;
     order: 2;
@@ -360,8 +363,8 @@ body.page-fun {
 .carousel-slide.active { display: block; }
 .carousel-slide img {
     width: 100%;
-    max-height: 240px;
-    object-fit: cover;
+    max-height: 400px;
+    object-fit: fill;
     display: block;
 }
 .carousel-caption {
@@ -379,6 +382,23 @@ body.page-fun {
 }
 .carousel-counter { color: #94a1b2; font-size: 11px; }
 
+/* magnifying loupe on carousel image hover */
+.carousel-slides { cursor: crosshair; }
+.carousel-lens {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 4px outset #c0c0c0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #16161A, 4px 4px 10px rgba(0, 0, 0, 0.7);
+    background-color: #000;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    pointer-events: none;
+    display: none;
+    z-index: 5;
+}
+
 /* Guestbook / anonymous message form */
 .guestbook {
     margin-top: 20px;
@@ -386,6 +406,8 @@ body.page-fun {
     background: #16161A;
     padding: 12px;
 }
+/* no extra gap when the guestbook lives in a sidebar */
+aside .guestbook { margin-top: 0; }
 .guestbook h2 { margin-top: 0; }
 .retro-label {
     display: block;
@@ -410,9 +432,14 @@ body.page-fun {
 
 /* update list in sidebar */
 #leftSidebar .box {
-    max-height: 200px;
+    max-height: 400px;
     overflow-y: auto;
 }
+#rightSidebar .box {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
 #updatesList li {
     margin-bottom: 8px;
     line-height: 1.4;
