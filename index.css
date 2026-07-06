@@ -204,6 +204,7 @@ strong {
     font-family: 'IBM Plex Mono', monospace;
     /* this styles bold text */
     color: #271c19;
+    text-decoration: underline;
 }
 
 /* this is just a cool box, it's the darker colored one */
@@ -282,6 +283,31 @@ feel free to play around with the order!
     #navbar ul {
         flex-wrap: wrap;
     }
+}
+
+/* === PER-PAGE BACKGROUNDS === */
+
+/* each page tags <body> with a class to get its own tiled background.
+home keeps the default grass.png from :root above */
+
+body.page-about {
+    --body-bg-image: url('assets/stars3.gif');
+    background-size: auto;
+}
+
+body.page-projects {
+    --body-bg-image: url('assets/background.gif');
+    background-size: auto;
+}
+
+body.page-contact {
+    --body-bg-image: url('assets/gmbg.gif');
+    background-size: auto;
+}
+
+body.page-fun {
+    --body-bg-image: url('assets/multi048.gif');
+    background-size: auto;
 }
 
 /* === RETRO ENHANCEMENTS === */
