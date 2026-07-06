@@ -56,7 +56,7 @@ before and after the text */
 the other elements, you will need to move that div outside
 of the container */
 #container {
-    max-width: 900px;
+    max-width: 1000px;
     /* this is the width of your layout! */
     /* if you change the above value, scroll to the bottom
 and change the media query according to the comment! */
@@ -138,7 +138,7 @@ if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
 aside {
     background-color: #72757e;
-    width: 200px;
+    width: 240px;
     padding: 20px;
     font-size: smaller;
     border: 2px outset #888;
@@ -151,7 +151,7 @@ main {
     font-family: 'IBM Plex Mono', monospace;
     background-color: #fff3ec;
     /* faint tiled pattern behind the text; the cream overlay keeps it
-    subtle — lower the 0.92 values to let more of the pattern through */
+    subtle — lower the two alpha values to let more of the pattern through */
     background-image: linear-gradient(rgba(255, 243, 236, 0.67), rgba(255, 243, 236, 0.67)), url('assets/misc059.gif');
     flex: 1;
     padding: 20px;
@@ -258,7 +258,7 @@ and then subtrack it by 100. use this new number as the
 "max-width" value below
 */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     #flex {
         flex-wrap: wrap;
     }
