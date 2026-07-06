@@ -296,17 +296,17 @@ body.page-about {
 }
 
 body.page-projects {
-    --body-bg-image: url('assets/background.gif');
+    --body-bg-image: url('assets/red.gif');
     background-size: auto;
 }
 
 body.page-contact {
-    --body-bg-image: url('assets/gmbg.gif');
+    --body-bg-image: url('assets/blkwarp.gif');
     background-size: auto;
 }
 
 body.page-fun {
-    --body-bg-image: url('assets/multi048.gif');
+    --body-bg-image: url('assets/animate.gif');
     background-size: auto;
 }
 
