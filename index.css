@@ -152,7 +152,7 @@ main {
     background-color: #fff3ec;
     /* faint tiled pattern behind the text; the cream overlay keeps it
     subtle — lower the two alpha values to let more of the pattern through */
-    background-image: linear-gradient(rgba(255, 243, 236, 0.67), rgba(255, 243, 236, 0.67)), url('assets/misc059.gif');
+    background-image: linear-gradient(rgba(255, 243, 236, 0.77), rgba(255, 243, 236, 0.77)), url('assets/misc059.gif');
     flex: 1;
     padding: 20px;
     order: 2;
